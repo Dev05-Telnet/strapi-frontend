@@ -1,0 +1,10 @@
+.grid {
+    color: rgba(36, 62, 99);
+    border: 0 solid #e5e7eb;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+    opacity: 1;
+    display: flex;
+    transform: none;
+    /* gap:20px */
+  }

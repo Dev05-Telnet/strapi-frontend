@@ -1,29 +1,21 @@
-import "./product-card.css";
-import Image from "./image";
+import styles from  "./product-card1.module.css";
 
 const ProductCard = ({ page }) => {
   return (
-    // <div className="card">
-    //   <div className="price">{page.product_id}</div>
-    //   {page.image?.url && <Image src={page.image.url} />}
-    //   <h2>{page.name}</h2>
-    //   <small>{page.sku}</small>
-    //   <div>{page.price}</div>
-    // </div>
-    <section class="product">
-      <div class="product__photo">
-        <div class="photo-container">
-          <div class="photo-main">
-            <div class="controls">
-              <i class="material-icons">share</i>
-              <i class="material-icons">favorite_border</i>
+    <section className={styles.product}>
+      <div className={styles.product__photo}>
+        <div className={styles.photo_container}>
+          <div className={styles.photo_main}>
+            <div className={styles.controls}>
+              <i className={styles.material_icons}>share</i>
+              <i className={styles.material_icons}>favorite_border</i>
             </div>
             <img
               src="https://res.cloudinary.com/john-mantas/image/upload/v1537291846/codepen/delicious-apples/green-apple-with-slice.png"
               alt="green apple slice"
             />
           </div>
-          <div class="photo-album">
+          <div className={styles.photo_album}>
             <ul>
               <li>
                 <img
@@ -53,15 +45,15 @@ const ProductCard = ({ page }) => {
           </div>
         </div>
       </div>
-      <div class="product__info">
-        <div class="title">
+      <div className={styles.product__info}>
+        <div className={styles.title}>
           <h1>Delicious Apples</h1>
           <span>COD: 45999</span>
         </div>
-        <div class="price">
+        <div className={styles.price}>
           R$ <span>7.93</span>
         </div>
-        <div class="variant">
+        <div className={styles.variant}>
           <h3>SELECT A COLOR</h3>
           <ul>
             <li>
@@ -90,7 +82,7 @@ const ProductCard = ({ page }) => {
             </li>
           </ul>
         </div>
-        <div class="description">
+        <div className={styles.description}>
           <h3>BENEFITS</h3>
           <ul>
             <li>Apples are nutricious</li>
@@ -99,7 +91,7 @@ const ProductCard = ({ page }) => {
             <li>They're linked to a lowest risk of diabetes</li>
           </ul>
         </div>
-        <button class="buy--btn">ADD TO CART</button>
+        <button className={styles.buybtn}>ADD TO CART</button>
       </div>
     </section>
   );

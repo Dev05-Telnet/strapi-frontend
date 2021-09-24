@@ -1,5 +1,7 @@
 import { useQuery, gql } from "@apollo/client";
-import ProductCard from "../components/product-card";
+import Grid from "../components/List/grid";
+import ProductCard1 from "../components/products/product-card1";
+import ProductCard2 from "../components/products/product-card2";
 
 const PRODUCTS = gql`
   query GetProducts {
@@ -26,11 +28,16 @@ const AllPages = () => {
   return (
     <div>
       <h1>List of pre-made Pages to meet any need</h1>
-      <div >
+      <Grid>
         {data.pages.map((page) => {
-          return <ProductCard key={page.id} page={page} />;
+          return <ProductCard2 key={page.id} page={page} />;
         })}
-      </div>
+      </Grid>
+      <Grid>
+        {data.pages.map((page) => {
+          return <ProductCard1 key={page.id} page={page} />;
+        })}
+      </Grid>
     </div>
   );
 };
