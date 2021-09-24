@@ -33,11 +33,11 @@ const AllPages = () => {
           return <ProductCard2 key={page.id} page={page} />;
         })}
       </Grid>
-      <Grid>
+      {/* <Grid>
         {data.pages.map((page) => {
           return <ProductCard1 key={page.id} page={page} />;
         })}
-      </Grid>
+      </Grid> */}
     </div>
   );
 };

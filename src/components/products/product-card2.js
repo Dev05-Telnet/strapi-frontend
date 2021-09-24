@@ -6,7 +6,7 @@ const ProductCard = ({ page }) => {
         <div
           className={styles.productImage}
           style={{
-            backgroundImage: `url(http://localhost:1337${page.image?.url})`,
+            backgroundImage: `url(${process.env.REACT_APP_URL}${page.image?.url})`,
           }}
         >
           <div className={styles.productRating}>

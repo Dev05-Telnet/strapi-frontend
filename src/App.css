@@ -67,7 +67,7 @@ body {
   height: 100%;
 }
 
-@media only screen and (min-width: 620px) {
+@media only screen and (min-width: 450px) {
   /* For mobiles: */
   .col-s-1 {
     width: 8.33%;
