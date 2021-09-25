@@ -54,17 +54,25 @@ body {
   }
 }
 
-[class*="col-"] {
-  float: left;
-  padding: 15px;
-}
-
 .w-full {
   width: 100%;
 }
 
 .h-full {
   height: 100%;
+}
+
+.w-min {
+  width: min-content;
+}
+
+.h-min {
+  height: min-content;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
 }
 
 @media only screen and (min-width: 450px) {

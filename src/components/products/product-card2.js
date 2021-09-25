@@ -1,8 +1,14 @@
+import Flex from "../list/flex";
 import styles from "./product-card2.module.css";
+
 const ProductCard = ({ page }) => {
   return (
     <div className="w-full col-s-6 col-m-4 col-3">
-      <div className={styles.productcard}>
+      <Flex
+        direction="column"
+        height="100%"
+        backgroundColor="rgba(237, 242, 247)"
+      >
         <div
           className={styles.productImage}
           style={{
@@ -22,12 +28,17 @@ const ProductCard = ({ page }) => {
             <div className={styles.ratingCount}>({page.product_id})</div>
           </div>
         </div>
-        <div className={styles.productdetails}>
-          <h5 className={styles.productName}>{page.name}</h5>
-          <p className={styles.productTag}>{"page.tags"}</p>
-          <p className={styles.productPrice}>{page.price}</p>
-        </div>
-      </div>
+        <Flex direction="column" padding="1rem" takeRemainingSpace>
+          <div>
+            <h5 className={styles.productName}>{page.name}</h5>
+            <p className={styles.productTag}>{"page.tags"}</p>
+          </div>
+          <Flex alignItems="center">
+            <div className={styles.productPrice}>{page.price}</div>
+            <div className={styles.buybutton}>Buy Now</div>
+          </Flex>
+        </Flex>
+      </Flex>
     </div>
   );
 };
