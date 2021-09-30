@@ -1,6 +1,5 @@
 import { useQuery, gql } from "@apollo/client";
 import Grid from "../components/list/grid";
-import ProductCard1 from "../components/products/product-card1";
 import ProductCard2 from "../components/products/product-card2";
 
 const PRODUCTS = gql`
